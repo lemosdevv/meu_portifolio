@@ -289,7 +289,7 @@ form .btn-enviar input{
     bottom: 0;
     width: 50px;
     height: 50px;
-    background-image: url('https://i.imgur.com/O9tNKt8.png'); /* URL da imagem do Mario */
+    background-image: url('images/mario.gif'); /* URL da imagem do Mario */
     background-size: cover;
 }
 

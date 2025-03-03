@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Olá, Eu sou o Mateus!</title>
+    <script src="script.js" defer></script>
+
+    <title>Meu Portifólio</title>
 </head>
 <body>
     
@@ -33,6 +35,27 @@
                     <button>Contato</button>
                 </a>
             </div><!-- btn-contato -->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
         </div><!-- interface -->
     </header>
 
@@ -43,12 +66,19 @@
                     <div class="txt-topo-site">
                         <h1>OLÁ, EU SOU O MATEUS <span>!</span></h1>
                         <p>Meu nome é Mateus Lemos do Nascimento, tenho 20 anos e sou de São Bernardo do Campo, SP. Sou programador e estudo programação desde 2022. Minhas principais habilidades incluem Java, Spring Boot, Angular, Docker, HTML, CSS, MySQL e Hibernate. Estou sempre em busca de novos desafios para aprimorar minhas habilidades e contribuir para projetos inovadores.</p>
-
+                        
                         <div class="btn-contato">
                             <a href="#">
                                 <button>Entre em contato</button>
-                            </a>
+                            </a> 
                         </div><!-- btn-contato -->
+
+                        <div class="btn-social">
+                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="#"><button><i class="bi bi-github"></i></button></a>
+                        </div>
+                        
                     </div><!-- txt-topo-site -->
 
                     <div class="img-topo-site">
@@ -87,10 +117,10 @@
             <div class="interface">
                 <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
                 <div class="flex">
-                    <div class="img-projeto1" style="background-image: url(images/WhatsApp\ Image\ 2025-02-25\ at\ 00.32.25.jpeg);">
+                    <div class="img-projeto" style="background-image: url(images/WhatsApp\ Image\ 2025-02-25\ at\ 00.32.25.jpeg);">
                         <div class="overlay">Aplicação web para gerenciar produtos e transações de um supermercado.</div>
                     </div>
-                    <div class="img-projeto2" style="background-image: url(images/Capturar.PNG);">
+                    <div class="img-projeto" style="background-image: url(images/Capturar.PNG);">
                         <div class="overlay">Java RESTful API criada para a Santander</div>
                     </div>
                 </div><!-- flex -->
@@ -122,6 +152,7 @@
                 </div>
             </div><!-- interface -->
         </section><!-- jogo-do-mario -->
+
         <footer>
             <div class="interface">
                 <div class="footer-content">
@@ -138,8 +169,7 @@
                         </ul>
                     </div>
                     <div class="footer-social">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                         <a href="#"><i class="bi bi-github"></i></a>
                     </div>
@@ -151,10 +181,6 @@
         </footer>
         
     </main>
-
-    <script src="script.js"></script>
-
-
     </main>
 
 </body>

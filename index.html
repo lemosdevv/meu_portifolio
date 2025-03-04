@@ -17,21 +17,20 @@
     <header>
         <div class="interface">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="images/logo.png" alt="Logo">
                 </a>
             </div><!-- logo -->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#topo-de-site">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="#">
+                <a href="#formulario">
                     <button>Contato</button>
                 </a>
             </div><!-- btn-contato -->
@@ -49,7 +48,6 @@
                     <ul>
                         <li><a href="#">Início</a></li>
                         <li><a href="#">Especialidades</a></li>
-                        <li><a href="#">Sobre</a></li>
                         <li><a href="#">Projetos</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
@@ -60,24 +58,25 @@
     </header>
 
     <main>
-        <section class="topo-de-site">
+        <section class="topo-de-site" id="topo-de-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>OLÁ, EU SOU O MATEUS <span>!</span></h1>
-                        <p>Meu nome é Mateus Lemos do Nascimento, tenho 20 anos e sou de São Bernardo do Campo, SP. Sou programador e estudo programação desde 2022. Minhas principais habilidades incluem Java, Spring Boot, Angular, Docker, HTML, CSS, MySQL e Hibernate. Estou sempre em busca de novos desafios para aprimorar minhas habilidades e contribuir para projetos inovadores.</p>
+                        <p>Meu nome é Mateus Lemos do Nascimento, tenho 20 anos e sou de São Bernardo do Campo, SP. Sou programador e estudo programação desde 2022, mas ingressei em Engenharia de Software em 2025. Minhas principais habilidades incluem Java, Spring Boot, Angular, Docker, HTML, CSS, MySQL e Hibernate. Estou sempre em busca de novos desafios para aprimorar minhas habilidades e contribuir para projetos inovadores.</p>
                         
                         <div class="btn-contato">
-                            <a href="#">
+                            <a href="#formulario">
                                 <button>Entre em contato</button>
                             </a> 
                         </div><!-- btn-contato -->
-
+                    <div class="container">   
                         <div class="btn-social">
-                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="#"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.instagram.com/_lemoszx"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/mateus-lemos-do-nascimento-a7b616221" target="_blank" title="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/lemosdevv"><button><i class="bi bi-github"></i></button></a>
                         </div>
+                    </div> 
                         
                     </div><!-- txt-topo-site -->
 
@@ -88,7 +87,7 @@
             </div><!-- interface -->
         </section><!-- topo-de-site -->
 
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -113,21 +112,31 @@
             </div><!-- interface -->
         </section><!-- especialidades -->
 
-        <section class="projetos">
+        <section class="projetos" id="projetos">
             <div class="interface">
                 <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
                 <div class="flex">
                     <div class="img-projeto" style="background-image: url(images/WhatsApp\ Image\ 2025-02-25\ at\ 00.32.25.jpeg);">
                         <div class="overlay">Aplicação web para gerenciar produtos e transações de um supermercado.</div>
                     </div>
+
                     <div class="img-projeto" style="background-image: url(images/Capturar.PNG);">
                         <div class="overlay">Java RESTful API criada para a Santander</div>
                     </div>
                 </div><!-- flex -->
+              
+                <div class="btn-visualizar">
+                    <a href="projeto1.html">
+                        <button class="visualizar-btn">Visualizar</button>
+                    </a>
+                    <a href="projeto2.html">
+                        <button class="visualizar-btn">Visualizar</button>
+                    </a>
+                </div><!-- btn-visualizar -->
             </div><!-- interface -->
         </section><!-- projetos -->
 
-        <section class="formulario">
+        <section class="formulario" id="formulario">
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
@@ -140,19 +149,6 @@
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
-
-
-        <!-- Adicionando o Jogo do Mario -->
-        <section id="jogo-do-mario">
-            <div class="interface">
-                <h2 class="titulo">Jogo do <span>Mario.</span></h2>
-                <div class="game-container">
-                    <div class="mario"></div>
-                    <div class="obstacle"></div>
-                </div>
-            </div><!-- interface -->
-        </section><!-- jogo-do-mario -->
-
         <footer>
             <div class="interface">
                 <div class="footer-content">
@@ -161,17 +157,16 @@
                     </div>
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Início</a></li>
-                            <li><a href="#">Especialidades</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Projetos</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#topo-de-site">Início</a></li>
+                            <li><a href="#especialidades">Especialidades</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#formulario">Contato</a></li>
                         </ul>
                     </div>
                     <div class="footer-social">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-github"></i></a>
+                        <a href="https://www.instagram.com/_lemoszx"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mateus-lemos-do-nascimento-a7b616221" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/lemosdevv"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-bottom">

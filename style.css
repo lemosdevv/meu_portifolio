@@ -1,3 +1,4 @@
+
 /* Estilo Geral */
 * {
   margin: 0;
@@ -47,7 +48,36 @@ h2.titulo span {
   color: #00ff08;
 }
 
+.btn-abrir-menu{
+  display: none;
+}
+
 /* Estilo do cabeçalho */
+.btn-contato {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 5s forwards;
+}
+
+.logo {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 5s forwards;
+}
+
+.menu-desktop {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 5s forwards;
+}
+
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 header {
   padding: 40px 4%;
@@ -145,6 +175,19 @@ header nav.menu-desktop ul li {
 }
 
 /* Estilo do Topo */
+.topo-de-site {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 section.topo-de-site {
   padding: 40px 4%;
 }
@@ -202,7 +245,21 @@ section.topo-de-site .flex {
   transition: 0.2s;
 }
 
+
+
 /* Estilo das Especialidades*/
+.especialidades {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 5s, transform 5s;
+}
+
+.especialidades.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 section.especialidades {
   padding: 40px 4%;
@@ -235,6 +292,17 @@ section.especialidades .flex {
 }
 
 /* Estilo dos projetos*/
+.projetos {
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 8s, transform 8s; 
+}
+
+.projetos.animate {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
 section.projetos {
   padding: 80px 4%;
   box-shadow: 0 0 40px 10px #ffffff1d;
@@ -282,7 +350,48 @@ section.projetos .flex {
   opacity: 1;
 }
 
+.btn-visualizar {
+  display: flex;
+  justify-content: space-around;
+  text-align: center; 
+  margin-top: 20px; 
+
+}
+
+.btn-visualizar a {
+  text-decoration: none; 
+  margin: 0 10px; 
+}
+
+.visualizar-btn {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600; 
+  background-color: #00ff08; 
+  border: 0; 
+  border-radius: 30px; 
+  cursor: pointer;
+  transition: .2s; 
+}
+
+
+.btn-visualizar button:hover{
+  box-shadow: 0px 0px 8px #00ff0868;
+  transform: scale(1.05);
+  transition: 2s;
+}
+
 /* Estilo dos formularios*/
+.formulario {
+  opacity: 0;
+  transform: translateY(-50px); 
+  transition: opacity 5s, transform 5s; 
+}
+
+.formulario.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 section.formulario {
   padding: 80px 4%;
 }
@@ -328,69 +437,7 @@ form .btn-enviar input {
   transition: 0.2s;
 }
 
-#jogo-do-mario {
-  text-align: center;
-  margin-top: 50px;
-}
-
-#jogo-do-mario .titulo {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.game-container {
-  position: relative;
-  width: 800px;
-  height: 200px;
-  background-color: #ffd700;
-  overflow: hidden;
-  margin: 50px auto; /* Centralizar o jogo */
-}
-
-.mario {
-  position: absolute;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  background-image: url("images/mario.gif"); /* URL da imagem do Mario */
-  background-size: cover;
-}
-
-.obstacle {
-  position: absolute;
-  bottom: 0;
-  left: 800px;
-  width: 50px;
-  height: 50px;
-  background-image: url(images/pipe.png);
-  animation: moveObstacle 2s infinite linear;
-}
-
-@keyframes moveObstacle {
-  0% {
-    left: 800px;
-  }
-  100% {
-    left: -50px;
-  }
-}
-
-.mario.jump {
-  animation: jump 0.5s linear;
-}
-
-@keyframes jump {
-  0% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 100px;
-  }
-  100% {
-    bottom: 0;
-  }
-}
-
+/* Rodapé */
 footer {
   background-color: #333;
   color: #fff;
@@ -420,21 +467,44 @@ footer {
 }
 
 .footer-menu ul li a {
-  color: #fff;
+  color: #7d7d7d;
   text-decoration: none;
-  font-weight: 500;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.footer-menu ul li a:hover{
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
 }
 
 .footer-social a {
   color: #fff;
   margin: 0 10px;
   font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2)
 }
 
 .footer-bottom {
   margin-top: 20px;
   font-size: 14px;
 }
+
+
+
+
+/* Mobile */
 
 @media screen and (max-width: 1020px) {
   .menu-desktop,
@@ -491,5 +561,63 @@ footer {
     gap: 60px;
   }
 
+  .btn-abrir-menu{
+    display: block;
+}
+}
 
+
+
+/* Projeto 1 */
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.project-section {
+  color: #fff;
+  width: 45%;
+}
+
+.project-section h3 {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.project-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-section ul li {
+  margin-bottom: 5px;
+}
+
+.project-section ul img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.project-section ul img:hover {
+  transform: scale(1.2); 
+}
+
+
+
+.topo-de-site .txt-topo-site .btn-social-projeto1 button {
+  
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #00ff08;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.2s;
 }

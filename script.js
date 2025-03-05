@@ -1,3 +1,5 @@
+
+//Menu Mobile
 let btnMenu = document.getElementById('btn-menu')
 let menu = document.getElementById('menu-mobile')
 let overlay = document.getElementById('overlay-menu')
@@ -15,7 +17,7 @@ overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
 
-
+//Animação entrada
 document.addEventListener('DOMContentLoaded', function() {
     const especialidadesSection = document.querySelector('.especialidades');
     const projetosSection = document.querySelector('.projetos');
@@ -58,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
     animateMenuOnLoad();
 });
 
+
+//Animação Texto
 const text = "OLÁ, EU SOU O MATEUS!";
     let index = 0;
 
@@ -72,3 +76,29 @@ const text = "OLÁ, EU SOU O MATEUS!";
     window.onload = function () {
         typeWriter();
     };
+
+//Formulario
+function sendEmail(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const celular = document.getElementById('celular').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const templateParams = {
+        nome: nome,
+        email: email,
+        celular: celular,
+        mensagem: mensagem
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Mensagem enviada com sucesso!');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Falha ao enviar mensagem.');
+        });
+}

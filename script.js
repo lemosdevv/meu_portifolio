@@ -21,26 +21,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const projetosSection = document.querySelector('.projetos');
     const formularioSection = document.querySelector('.formulario');
     const menuDesktop = document.querySelector('.menu-desktop');
+    const certificacoesSection = document.querySelector('.certificacoes');
 
     function animateOnScroll() {
         const screenPosition = window.innerHeight;
 
-        // Animação para a seção especialidades
+
         const especialidadesPosition = especialidadesSection.getBoundingClientRect().top;
         if (especialidadesPosition < screenPosition) {
             especialidadesSection.classList.add('animate');
         }
 
-        // Animação para a seção projetos
+
         const projetosPosition = projetosSection.getBoundingClientRect().top;
         if (projetosPosition < screenPosition) {
             projetosSection.classList.add('animate');
         }
 
-        // Animação para a seção formulario (Fala Comigo)
+
         const formularioPosition = formularioSection.getBoundingClientRect().top;
         if (formularioPosition < screenPosition) {
             formularioSection.classList.add('animate');
+        }
+
+        const certificacoesPosition = certificacoesSection.getBoundingClientRect().top;
+        if (certificacoesPosition < screenPosition) {
+            certificacoesSection.classList.add('animate');
         }
     }
 
@@ -51,3 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateMenuOnLoad();
 });
+
+const text = "OLÁ, EU SOU O MATEUS!";
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 150); // Ajuste a velocidade aqui
+        }
+    }
+
+    window.onload = function () {
+        typeWriter();
+    };

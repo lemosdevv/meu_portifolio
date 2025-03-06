@@ -79,7 +79,7 @@ const text = "OLÁ, EU SOU O MATEUS!";
 
 //Formulario
 function sendEmail(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
@@ -87,13 +87,14 @@ function sendEmail(event) {
     const mensagem = document.getElementById('mensagem').value;
 
     const templateParams = {
-        nome: nome,
+        from_name: nome,
+        to_name: "Mateus Lemos do Nascimento",
         email: email,
         celular: celular,
         mensagem: mensagem
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_zd4euey', 'template_vcsq4mb', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Mensagem enviada com sucesso!');
